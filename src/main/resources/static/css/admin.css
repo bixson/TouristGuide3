@@ -1,0 +1,90 @@
+/* Qodana Suppress: DuplicateCode */ /* <-- this we do to suppress the 'duppie' warning from Qodana */
+body {
+    background-color: #133D40;
+    color: #D5CCB5;
+    font-family: 'American Typewriter', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    background: rgba(23, 64, 65, 0.95) !important;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #D5CCB5;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    font-family: "Georgia", serif !important;
+    text-transform: uppercase;
+}
+
+.container {
+    background-color: rgba(23, 64, 65, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 500px;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #D5CCB5;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.full-width-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #136D70;
+    color: #E6DDC7;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    width: 85%;
+    font-size: 16px;
+    height: 45px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.full-width-button.view-button:hover {
+    background-color: #66C7F4;
+    color: #fff;
+}
+
+.full-width-button.add-button:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+.full-width-button.back-button:hover {
+    background-color: #9E2A2B;
+    color: #fff;
+}
+
+.full-width-button:hover {
+    background-color: #E3C567;
+    color: #fff;
+}
