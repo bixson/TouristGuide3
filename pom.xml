@@ -11,8 +11,8 @@
     <groupId>kea.second</groupId>
     <artifactId>TouristGuide2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>TouristGuide2</name>
-    <description>TouristGuide2</description>
+    <name>TouristGuide3</name>
+    <description>TouristGuide3</description>
     <url/>
     <licenses>
         <license/>
@@ -70,6 +70,27 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
