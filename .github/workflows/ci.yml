@@ -1,0 +1,44 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - Andreas
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Build and Run Tests
+        run: mvn clean verify
+
+      - name: Run Qodana Code Analysis
+        uses: JetBrains/qodana-action@v2023.3
+        with:
+          args: "--property=failThreshold=10"
+
+      - name: Upload Qodana Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: qodana-report
+          path: qodana/results
